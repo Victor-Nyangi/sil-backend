@@ -10,8 +10,6 @@ app.use(cors({ origin: true, credentials: true }));
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-// Init Middleware
-// app.use(express.json({ extended: false }));
 
 // parse requests of content-type - application/json
 app.use(express.json());
