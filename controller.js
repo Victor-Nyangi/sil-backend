@@ -8,7 +8,7 @@ exports.verifyToken = async (req, res) => {
 
     try {
         // Call the verifyIdToken to
-        // varify and decode it
+        // verify and decode it
         const ticket = await client.verifyIdToken({
             idToken: jwtToken,
             audience: client_id,
@@ -31,9 +31,4 @@ exports.verifyToken = async (req, res) => {
     } catch (error) {
         res.status(409).json({ message: error.message });
     }
-}
-
-exports.checkAuthentication = async (req, res) => {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET)
-
 }
